@@ -56,3 +56,21 @@ Top 3 Girls:
 | 2009 | F |Isabella	 |22.289	 |1 |
 | 2009 |  F| Emma	| 17.889	| 2|
 | 2009 | F |Olivia	 |17.429	 |3 |
+
+Top 3 Boys:
+
+| Year	 | Gender |Name |num_babies	 |popularity |
+|--|--|--|--|--|
+| 1980 |M  |Michael| 68.680|1 |
+|  1980| M | Christopher| 49.091|2 |
+|  1980| M | Jason|48.170 |3 |
+| 1981 |  M|Michael|68.765 |1 |
+|  1981| M | Christopher|50.228 | 2|
+|1981  |M  |Matthew|43.324 | 3|
+| ... |...  |... |... |... |
+| 2008 | M |Jacob|22.587	 |1 |
+| 2008  | M |Michael	 | 20.609	| 2|
+| 2008  |  M| Ethan	|20.206	 |3 |
+| 2009 | M |Jacob	 |21.162	 |1 |
+| 2009 |  M| Ethan	| 19.839	| 2|
+| 2009 | M |Michael	 |18.927	 |3 |
