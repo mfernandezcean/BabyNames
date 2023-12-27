@@ -1,3 +1,4 @@
+## Year
 #### Query for Births: 
 
 ```
@@ -74,3 +75,42 @@ Top 3 Boys:
 | 2009 | M |Jacob	 |21.162	 |1 |
 | 2009 |  M| Ethan	| 19.839	| 2|
 | 2009 | M |Michael	 |18.927	 |3 |
+
+## Decade 
+
+```
+SELECT * FROM
+	(WITH babies_by_decade AS (SELECT (Case WHEN Year between 1980 AND 1989 THEN 'Eighties' -- Case statement to group by the year into decades
+					        WHEN Year between 1990 AND 1999 THEN 'Nineties'
+                                                WHEN Year between 2000 AND 2009 THEN 'Two_Thousands'
+                                             ELSE 'Check Logic' END) AS decade,
+    Gender, Name, SUM(Births) as num_babies
+	FROM names
+	GROUP BY 1,2,3)
+
+	SELECT decade, Gender, Name, num_babies,
+		row_number() over(Partition by decade, Gender Order by num_babies DESC) AS popularity
+	FROM babies_by_decade) x
+Where popularity <=3 ; 
+```
+
+| decade	 | Gender	 |Name	  |  num_babies	|  popularity |
+|--|--|--|--|--|
+| Eighties	 | F |	Jessica	 | 469.452	  | 1 |
+| Eighties	 | F |	 Jennifer	| 440.845	  |2  |
+| Eighties	 |  F|	Amanda	 |  369.705	 |3  |
+|  Eighties	| M |	Michael	 | 663.645	  |1  |
+|  Eighties	|  M|	Christopher	 | 554.838	  | 2 |
+| Eighties	 |  M|	Matthew	 |  458.918	 |  3|
+| Nineties	 | F |	 Jessica	| 303.079	  |1  |
+| Nineties	 |  F|	 Ashley	|  301.798	 | 2 |
+| Nineties	 |  F|	Emily	 | 237.222	  | 3 |
+| Nineties	 |  M|	 Michael	| 462.302	  |1  |
+|  Nineties	|  M|	Christopher	 |  360.196	 | 2 |
+|  Nineties	|  M|	Matthew	 |  351.596	 | 3 |
+| Two_Thousands	 | F |Emily		 |223640	   |  1|
+| Two_Thousands	 |  F|	Madison	 | 193112	  | 2 |
+|  Two_Thousands	|F  |Emma		 | 181195	  |3  |
+|  Two_Thousands	| M |Jacob		 |  273746	 | 1 |
+| Two_Thousands	 |  M|Michael		 |  250471	 | 2 |
+|Two_Thousands	  |  M|	Joshua	 | 231851	  |3  |
