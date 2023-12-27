@@ -166,7 +166,7 @@ Behavior of Top 10 names in 1980:
 
 ```
 SELECT t1.Year, t1.Name, t1.popularity1980, t2.Year, t2.Name, t2.popularity2009,
-	CAST(t2.popularity2009 AS SIGNED) - CAST(t1.popularity1980 AS SIGNED) AS _2009_diff_1980
+	CAST(t2.popularity2009 AS SIGNED) - CAST(t1.popularity1980 AS SIGNED) AS _2009_diff_1980      --Cast to convert into numbers that can host negative values
 FROM names_1980 t1 INNER JOIN  names_2009 t2 ON t1.Name = t2.Name 
 ORDER BY _2009_diff_1980 ASC;
 ```
@@ -182,7 +182,7 @@ ORDER BY _2009_diff_1980 ASC;
 
 ```
 SELECT t1.Year, t1.Name, t1.popularity1980, t2.Year, t2.Name, t2.popularity2009,
-	CAST(t2.popularity2009 AS SIGNED) - CAST(t1.popularity1980 AS SIGNED) AS _2009_diff_1980
+	CAST(t2.popularity2009 AS SIGNED) - CAST(t1.popularity1980 AS SIGNED) AS _2009_diff_1980  	--Cast to convert into numbers that can host negative values
 FROM names_1980 t1 INNER JOIN  names_2009 t2 ON t1.Name = t2.Name 
 ORDER BY _2009_diff_1980 DESC;
 ```
