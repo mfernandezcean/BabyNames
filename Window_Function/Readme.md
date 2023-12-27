@@ -1,5 +1,5 @@
-### Window Function: 
-To create a popularity RANKING: 
+## Window Function: 
+### To create a popularity RANKING for Girls: 
 ```
 SELECT Year, Name,
 	row_number() over(partition by Year order by num_babies DESC) as popularity
@@ -60,6 +60,7 @@ WHERE Name = "Jessica";
 
 ![jessica and ashley chart](https://github.com/mfernandezcean/BabyNames/assets/105746149/7e80389c-6539-4e2c-8f16-3bdff68e93da)
 
+### To create a popularity RANKING for Boys: 
 ```
 SELECT name, SUM(Births) as Births_Sum 
 FROM names
