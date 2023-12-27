@@ -101,3 +101,16 @@ GROUP BY new_region;
 | New_England	 | 4.269.213 |
 | Pacific	 |  17.540.716|
 | South	 | 34.219.920 |
+
+--- 
+### Most popular name by Region:
+
+#### Midwest:
+| new_region	 | Gender	 |Name	 | popularity |
+|--|--|--|--|
+|Mid_Atlantic	 | F | Jessica	| 1|
+| Mid_Atlantic	 | F |Ashley	 |2 |
+| Mid_Atlantic	 | F |Jennifer	 | 3|
+| Mid_Atlantic	 | M | Michael	| 1|
+| Mid_Atlantic	 | M | Matthew	|2 |
+| Mid_Atlantic	 | M |Christopher	 |3 |
