@@ -56,3 +56,40 @@ WHERE Name = "Jessica";
 | 2007 | Jessica	  |42|
 |2008  | Jessica	  | 60|
 |2009 |Jessica	   |78 |
+
+
+![jessica and ashley chart](https://github.com/mfernandezcean/BabyNames/assets/105746149/7e80389c-6539-4e2c-8f16-3bdff68e93da)
+
+We want to Know how the name 'Michael' moved in popularity over the years:
+|# Year  |Name	  | popularity|
+|--|--|--|
+| 1980	 | Michael|1 |
+| 1981	 | Michael| 1|
+| 1982 | Michael| 1|
+| 1983 | Michael| 1|
+| 1984 |Michael| 1|
+| 1985 |Michael|1 |
+|  1986| Michael| 1|
+|  1987| Michael| 1|
+|  1988| Michael|1 |
+|  1989| Michael| 1|
+| 1990 | Michael| 1|
+|  1991| Michael| 1|
+| 1992 |Michael|1|
+| 1993 | Michael| 1|
+|  1994| Michael| 1|
+|1995  | Michael| 1|
+|  1996|Michael|1|
+| 1997 |  Michael| 1|
+|  1998| Michael| 1|
+| 1999 | Michael|2 |
+| 2000 | Michael|2|
+| 2001 |Michael|2 |
+|  2002| Michael| 2|
+| 2003 | Michael| 2|
+| 2004 | Michael| 2|
+| 2005 | Michael| 2|
+| 2006 |  Michael| 2|
+| 2007 | Michael|2|
+|2008  | Michael| 2|
+|2009 |Michael|3|
