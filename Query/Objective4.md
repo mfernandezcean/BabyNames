@@ -22,3 +22,35 @@ WHERE num_genders > 1
 | Ashley	 |  2| 792.865
 |  James	|  2| 766.789
 | Andrew	 |  2| 761.824
+
+---
+
+### Shortest and Longest Names:
+
+```
+SELECT Name, LENGTH(Name) as name_length
+FROM names
+ORDER BY name_length ASC;
+
+```
+|Name	  | name_length |
+|--|--|
+| Ab	 | 2 |
+| Ai	 | 2 |
+| Aj	 | 2 |
+| ... | ... |
+| Yo	 | 2 |
+| Yu	 | 2 |
+| Zi	 | 2 |**
+
+```
+SELECT Name, LENGTH(Name) as name_length
+FROM names
+ORDER BY name_length DESC;
+```
+| Name	 | name_length |
+|--|--|
+| Franciscojavier	 | 15 |
+| Johnchristopher	 | 15 |
+|  Mariadelosangel	|  15|
+|  Ryanchristopher	| 15 |
