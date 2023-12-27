@@ -47,3 +47,21 @@ LIMIT 10;
 ### Querying for biggest Jump in popularity: 
 
 #### Go to: [Window_Function](https://github.com/mfernandezcean/BabyNames/blob/main/Window_Function/Readme.md)
+
+### Top 5 Increases:
+| Year	 |Name	  | popularity1980	|Year	 |Name	 | popularity2009	|Increase of | 
+|--|--|--|--|--|--|--|
+|  1980	|  Colton	| 5789	|2009	 | Colton	| 149	|5640 |
+| 1980	 | Aidan	 | 5691	| 2009	|Aidan	 | 109	|5582 |
+| 1980	 | Rowan	 |5772	 |2009	 | Rowan	| 445	|5327 |
+| 1980	 |Skylar	  | 5498	|2009	 |Skylar	 |313	 |5185 |
+| 1980	 | Macy	 | 5615	|2009	 | Macy	| 571	|5044 |
+
+### Top 5 Decreases:
+| Year	 |Name	  | popularity1980	|Year	 |Name	 | popularity2009	|Decrease of | 
+|--|--|--|--|--|--|--|
+|  1980	|  Rusty	| 761	|2009	 | Rusty	| 9724	|8963|
+| 1980	 | Tonia	| 879	| 2009	|Tonia	| 9548	|8669|
+| 1980	 | Cherie	|808	|2009	 | Cherie	| 9347	|8539|
+| 1980	 |Kerri	| 444	|2009	 |Kerri	|313	 |8279|
+| 1980	 | Tarah		 | 1661	|2009	 | Tarah	| 9812	|8151|
