@@ -45,5 +45,12 @@ LIMIT 10;
 |John	|721.946|
 ---
 ### Querying for biggest Jump in popularity: 
+Checking for Girl's name by Year:
+```
+SELECT year, name, SUM(births) as num_babies
+FROM names
+WHERE Gender = "F"
+GROUP BY 1,2;
+```
 
 [Window_Function](https://github.com/mfernandezcean/BabyNames/blob/main/Window_Function/Readme.md)
