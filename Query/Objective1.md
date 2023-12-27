@@ -52,5 +52,21 @@ FROM names
 WHERE Gender = "F"
 GROUP BY 1,2;
 ```
+Save the Query in a CTE:
+
+```
+WITH girl_names AS (SELECT year, name, SUM(births) as num_babies
+FROM names
+WHERE Gender = "F"
+GROUP BY 1,2)
+```
+The return is the popularity for every Year:
+|  # Year| Name	 | popularity|
+|--|--|--|
+|1980	  |  Jennifer	| 1|
+| 1980	 | Amanda	 |2 |
+| 1980	 |  Jessica	| 3|
+| 1980	 | Melissa	 |4 |
+| 1980	 |Sarah	  |5 |
 
 [Window_Function](https://github.com/mfernandezcean/BabyNames/blob/main/Window_Function/Readme.md)
