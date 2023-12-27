@@ -61,3 +61,17 @@ WHERE new_region IS NULL ;
 | State |new_region  |
 |--|--|
 | MI |null  |
+
+Michigan does not have a region. We need to update to Midwest region.
+
+```
+WITH new_region AS(SELECT State,
+	   Case WHEN region = ' New England' Then 'New_England' ELSE Region END AS new_region
+FROM regions
+UNION					--- Use Union to stack both tables 
+SELECT 'MI' AS State, 'Midwest' AS Region)
+
+SELECT DISTINCT n.State, nr.new_region
+FROM names n LEFT JOIN new_region nr
+	ON n.State = nr.State;
+```
