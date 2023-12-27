@@ -1,6 +1,12 @@
 ### In this folder you will find one file for each objective
 
-**Hole Data:**
+
+### Data Base:
+
+![2](https://github.com/mfernandezcean/BabyNames/assets/105746149/23c9aa73-b36a-4e31-b306-2fbec41a1cc6)
+
+
+### Whole Data:
 ```
 SELECT * 
 FROM names;
