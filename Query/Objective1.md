@@ -20,7 +20,7 @@ LIMIT 10;
 | Samantha	| 479.347|
 | Stephanie	| 417.748|
 |Nicole	 |401.046 |
----
+
 ### Querying for the Top 10 most popular names for Boys:
 ```
 SELECT name, SUM(Births) as Births_Sum 
@@ -43,3 +43,5 @@ LIMIT 10;
 | Andrew	| 760.250|
 | Joseph	| 754.667|
 |John	|721.946|
+---
+### Querying for biggest Jump in popularity: 
