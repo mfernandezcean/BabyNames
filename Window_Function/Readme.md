@@ -145,3 +145,16 @@ SELECT *
 FROM names_1980 t1 INNER JOIN  names_2009 t2 ON t1.Name = t2.Name 		-- Joining 1980 and 2009
 ;
 ```
+Behavior of Top 10 names in 1980:
+| Year	 |Name	  | popularity1980	| Year	|Name	 |popularity2009 |
+|--|--|--|--|--|--|
+|1980	  |Michael	  | 1| 2009	|Michael	 |5 |
+| 1980	   | Jennifer	 |2 |2009 |Jennifer	  |248 |
+| 1980	   |  Christopher	| 3| 2009|Christopher	 | 14|
+| 1980	   | Jason	 | 4| 2009|Jason | 96|
+|1980	    | David	 |5 | 2009|David	  | 19|
+|1980	    | James	 | 6|2009 | James	 |26 |
+| 1980	   |  Matthew	| 7| 2009|Matthew	 |17 |
+| 1980	   | Joshua	 |8 |2009 |Joshua	  |9 |
+| 1980	   | Amanda	 |9 |2009 |Amanda	  | 363|
+| 1980	   |  John | 10| 2009| John | 35|
