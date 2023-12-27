@@ -13,6 +13,7 @@ The return is the popularity for every Year:
 | 1980	 |  Jessica	| 3|
 | 1980	 | Melissa	 |4 |
 | 1980	 |Sarah	  |5 |
+|...|...|...|
 
 ![CTE popularity Girls](https://github.com/mfernandezcean/BabyNames/assets/105746149/6c1ee764-51bf-4e5b-99b7-6e6c0595853d)
 
