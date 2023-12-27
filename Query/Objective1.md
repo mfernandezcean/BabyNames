@@ -30,3 +30,16 @@ GROUP BY name
 ORDER BY Births_Sum DESC
 LIMIT 10;
 ```
+
+| # name | Births_Sum |
+|--|--|
+|Michael	|  1.376.418|
+|Christopher	|1.118.253
+|Matthew	| 1.031.984|
+| Joshua	| 957.518|
+| Daniel	| 821.281|
+|David	|816.976|
+| James	| 764.296|
+| Andrew	| 760.250|
+| Joseph	| 754.667|
+|John	|721.946|
