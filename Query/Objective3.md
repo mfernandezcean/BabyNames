@@ -75,3 +75,29 @@ SELECT DISTINCT n.State, nr.new_region
 FROM names n LEFT JOIN new_region nr
 	ON n.State = nr.State;
 ```
+### Good to go
+---
+
+#### Births by Region:
+
+```
+WITH new_region AS(SELECT State,
+	   Case WHEN region = 'New England' Then 'New_England' ELSE Region END AS new_region
+FROM regions
+UNION
+SELECT 'MI' AS State, 'Midwest' AS Region)
+
+SELECT new_region, SUM(Births) as num_babies
+FROM names n LEFT JOIN new_region nr
+	ON n.State = nr.State
+GROUP BY new_region;
+```
+
+|  new_region	| num_babies |
+|--|--|
+| Mid_Atlantic	 |13.742.667  |
+| Midwest	 | 22.676.130 |
+| Mountain	 | 6.282.217 |
+| New_England	 | 4.269.213 |
+| Pacific	 |  17.540.716|
+| South	 | 34.219.920 |
