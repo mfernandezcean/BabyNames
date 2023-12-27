@@ -117,3 +117,31 @@ We want to Know how the name 'Michael' moved in popularity over the years:
 
 ![michael and Cristopher chart](https://github.com/mfernandezcean/BabyNames/assets/105746149/06e5d67b-e0c5-49a5-8fb6-c56250f16577)
 
+### JUMPS:
+
+```
+
+WITH names_1980 AS(
+	WITH all_names AS (SELECT Year, Name, SUM(births) AS num_babies
+	FROM names
+	GROUP BY Year, Name) 
+
+	SELECT Year, Name,
+		row_number() Over (Partition By Year Order By num_babies DESC) AS popularity1980
+	FROM all_names
+	WHERE Year = 1980), 							--Querying for popularity in 1980
+    
+names_2009 AS(
+	WITH all_names AS (SELECT Year, Name, SUM(births) AS num_babies
+	FROM names
+	GROUP BY Year, Name)
+
+	SELECT Year, Name,
+		row_number() Over (Partition By Year Order By num_babies DESC) AS popularity2009
+	FROM all_names
+	WHERE Year = 2009) 							--Querying for popularity in 2009
+    
+SELECT * 
+FROM names_1980 t1 INNER JOIN  names_2009 t2 ON t1.Name = t2.Name 		-- Joining 1980 and 2009
+;
+```
