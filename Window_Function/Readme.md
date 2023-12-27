@@ -160,7 +160,9 @@ Behavior of Top 10 names in 1980:
 | 1980	   | Amanda	 |9 |2009 |Amanda	  | 363|
 | 1980	   |  John | 10| 2009| John | 35|
 
-### Check for Popularity Jumps between 2009 and 1980:
+## Check for Popularity Jumps between 2009 and 1980:
+
+### Top 5 Increases
 
 ```
 SELECT t1.Year, t1.Name, t1.popularity1980, t2.Year, t2.Name, t2.popularity2009,
@@ -168,7 +170,15 @@ SELECT t1.Year, t1.Name, t1.popularity1980, t2.Year, t2.Name, t2.popularity2009,
 FROM names_1980 t1 INNER JOIN  names_2009 t2 ON t1.Name = t2.Name 
 ORDER BY _2009_diff_1980 ASC;
 ```
+| Year	 |Name	  | popularity1980	|Year	 |Name	 | popularity2009	|Increase of | 
+|--|--|--|--|--|--|--|
+|  1980	|  Colton	| 5789	|2009	 | Colton	| 149	|5640 |
+| 1980	 | Aidan	 | 5691	| 2009	|Aidan	 | 109	|5582 |
+| 1980	 | Rowan	 |5772	 |2009	 | Rowan	| 445	|5327 |
+| 1980	 |Skylar	  | 5498	|2009	 |Skylar	 |313	 |5185 |
+| 1980	 | Macy	 | 5615	|2009	 | Macy	| 571	|5044 |
 
+### Top 5 Decreases
 
 ```
 SELECT t1.Year, t1.Name, t1.popularity1980, t2.Year, t2.Name, t2.popularity2009,
@@ -176,3 +186,10 @@ SELECT t1.Year, t1.Name, t1.popularity1980, t2.Year, t2.Name, t2.popularity2009,
 FROM names_1980 t1 INNER JOIN  names_2009 t2 ON t1.Name = t2.Name 
 ORDER BY _2009_diff_1980 DESC;
 ```
+| Year	 |Name	  | popularity1980	|Year	 |Name	 | popularity2009	|Decrease of | 
+|--|--|--|--|--|--|--|
+|  1980	|  Rusty	| 761	|2009	 | Rusty	| 9724	|8963|
+| 1980	 | Tonia	| 879	| 2009	|Tonia	| 9548	|8669|
+| 1980	 | Cherie	|808	|2009	 | Cherie	| 9347	|8539|
+| 1980	 |Kerri	| 444	|2009	 |Kerri	|313	 |8279|
+| 1980	 | Tarah		 | 1661	|2009	 | Tarah	| 9812	|8151|
