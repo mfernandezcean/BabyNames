@@ -117,7 +117,8 @@ We want to Know how the name 'Michael' moved in popularity over the years:
 
 ![michael and Cristopher chart](https://github.com/mfernandezcean/BabyNames/assets/105746149/06e5d67b-e0c5-49a5-8fb6-c56250f16577)
 
-### JUMPS:
+---
+### JUMPS in Popularity:
 
 ```
 
@@ -158,3 +159,20 @@ Behavior of Top 10 names in 1980:
 | 1980	   | Joshua	 |8 |2009 |Joshua	  |9 |
 | 1980	   | Amanda	 |9 |2009 |Amanda	  | 363|
 | 1980	   |  John | 10| 2009| John | 35|
+
+### Check for Popularity Jumps between 2009 and 1980:
+
+```
+SELECT t1.Year, t1.Name, t1.popularity1980, t2.Year, t2.Name, t2.popularity2009,
+	CAST(t2.popularity2009 AS SIGNED) - CAST(t1.popularity1980 AS SIGNED) AS _2009_diff_1980
+FROM names_1980 t1 INNER JOIN  names_2009 t2 ON t1.Name = t2.Name 
+ORDER BY _2009_diff_1980 ASC;
+```
+
+
+```
+SELECT t1.Year, t1.Name, t1.popularity1980, t2.Year, t2.Name, t2.popularity2009,
+	CAST(t2.popularity2009 AS SIGNED) - CAST(t1.popularity1980 AS SIGNED) AS _2009_diff_1980
+FROM names_1980 t1 INNER JOIN  names_2009 t2 ON t1.Name = t2.Name 
+ORDER BY _2009_diff_1980 DESC;
+```
